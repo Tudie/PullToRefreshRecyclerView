@@ -2,14 +2,14 @@
 
 ## 1. 在Module下的build.gradle中添加依赖
 ### Step 1. Add the JitPack repository to your build file
-allprojects {
+    allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
 		}
 	}
 ### Step 2. Add the dependency
-dependencies {
+     dependencies {
 	        compile 'com.github.Tudie:PullToRefreshRecyclerView:v1.0.1'
 	}
 
@@ -23,15 +23,15 @@ dependencies {
 
 ## 3. 初始化PullToRefreshRecyclerView并设置属性和回调
 
-        //是否开启下拉刷新功能
-        pullToRefreshRV.setPullRefreshEnabled(true);
-        //是否开启上拉加载功能
-        pullToRefreshRV.setLoadingMoreEnabled(true);
-   //设置刷新回调
+    //是否开启下拉刷新功能
+    pullToRefreshRV.setPullRefreshEnabled(true);
+    //是否开启上拉加载功能
+    pullToRefreshRV.setLoadingMoreEnabled(true);
+    //设置刷新回调
      pullToRefreshRV.setOnRefreshListener(this);
 
 ## 4.处理刷新加载逻辑
- @Override
+    @Override
     public void onRefresh() {
         pullToRefreshRV.postDelayed(new Runnable() {
             @Override
