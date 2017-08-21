@@ -121,4 +121,20 @@ public class MultiItemTypeAdapter<T> extends RecyclerView.Adapter<ViewHolder> {
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.mOnItemClickListener = onItemClickListener;
     }
+
+
+    public void NotifyItemRemoved(int position) {//dapter下标加1
+        if (position!=mDatas.size()){
+            mDatas.remove(position);
+            notifyItemRemoved(position);
+        }else {
+            mDatas.remove(position-1);
+            notifyItemRemoved(position);
+        }
+
+    }
+    public void NotifyItemChanged(int position,T t) {//dapter下标
+        mDatas.set(position,t);
+        notifyItemChanged(position);
+    }
 }
