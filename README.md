@@ -10,7 +10,7 @@
 	}
 ### Step 2. Add the dependency
      dependencies {
-	        compile 'com.github.Tudie:PullToRefreshRecyclerView:v1.0.1'
+	        compile 'com.github.Tudie:PullToRefreshRecyclerView:v1.0.0'
 	}
 
 ## 2. 在布局文件中添加PullToRefreshRecyclerView控件
